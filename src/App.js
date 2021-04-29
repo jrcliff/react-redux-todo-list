@@ -15,19 +15,18 @@ function App() {
     <div className="App">
       <div className='app__container'>
         <div className='app__toDoContainer'>
-        {toDoList.map(item => (
-            <ToDoItem
-              name={item.item}
-              done={item.done}
-              id={item.id}
-             />
-        ))}
-
+        {
+            toDoList.map(item => (
+              <ToDoItem
+                name={item.item}
+                done={item.done}
+                id={item.id}
+              />
+          ))
+        }
         </div>
         <Input/>
       </div>
- 
-      
     </div>
   );
 }

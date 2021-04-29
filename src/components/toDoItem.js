@@ -3,7 +3,7 @@ import CheckBox from '@material-ui/core/CheckBox'
 import './ToDoItem.css'
 
 import {useDispatch} from 'react-redux'
-import setCheck from '../features/toDoSlice'
+import { setCheck } from '../features/toDoSlice'
 
 const ToDoItem = ({name, done, id}) => {
     const dispatch = useDispatch()
@@ -18,7 +18,7 @@ const ToDoItem = ({name, done, id}) => {
             onChange={handleCheck}
             inputProps={{'aria-label': 'secondary checkbox'}}
          />
-            <div className={done && 'toDoItem--done'}>{name}</div>
+            <p className={done && 'toDoItem--done'}>{name}</p>
         </div>
     )
 }
