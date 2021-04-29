@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import './Input.css'
 
-import {useDispatch} from 'react-redux'
+import { useDispatch } from 'react-redux'
 import saveToDo from '../features/toDoSlice'
 
 const Input = () => {
@@ -10,7 +10,7 @@ const Input = () => {
     const dispatch = useDispatch()
 
     const addToDo = () => {
-        console.log(`adding ${input}`);
+        // console.log(toDoList);
 
         dispatch(saveToDo({
             item: input,
@@ -23,7 +23,7 @@ const Input = () => {
     return (
         <div className='input'>
             <input type='text' value={input} onChange={e => setInput(e.target.value)} />
-            <button onClick={addToDo}>Add!</button>
+            <button type='submit' onClick={addToDo}>Add!</button>
         </div>
     )
 }
